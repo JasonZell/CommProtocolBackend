@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package UGV;
+
+message ArmCommand {
+	uint32 id = 1;
+	uint32 position = 2;
+	
+}
