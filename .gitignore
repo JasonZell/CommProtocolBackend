@@ -4,3 +4,6 @@ CommProtocolBackend/CommProtocolBackend/Release/
 CommProtocolBackend/Debug/
 CommProtocolBackend/Release/
 CommProtocolBackend/.vs/
+TCPstuff/node_modules/
+
+TCPstuff/package-lock\.json
