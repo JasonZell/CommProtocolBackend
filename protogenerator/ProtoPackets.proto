@@ -143,3 +143,49 @@ message VehicleWaypointCommand {
     float latitude = 3;
     float altitude = 4;
 }
+
+message Packet {
+
+  oneof packet {
+
+    AirVehicleGroundRelativeState AirVehicleGroundRelativeState = 1;
+
+    ArmCommand ArmCommand = 2;
+
+    ArmPosition ArmPosition = 3;
+
+    Battery Battery = 4;
+
+    TargetAcknowledgement TargetAcknowledgement = 5;
+
+    TargetDesignationCommand TargetDesignationCommand = 6;
+
+    TargetStatus TargetStatus = 7;
+
+    VehicleAttitude VehicleAttitude = 8;
+
+    VehicleAuthorizationReply VehicleAuthorizationReply = 9;
+
+    VehicleAuthorizationRequest VehicleAuthorizationRequest = 10;
+
+    VehicleBodySensedState VehicleBodySensedState = 11;
+
+    VehicleGlobalPosition VehicleGlobalPosition = 12;
+
+    VehicleIdentification VehicleIdentification = 13;
+
+    VehicleInertialState VehicleInertialState = 14;
+
+    VehicleModeCommand VehicleModeCommand = 15;
+
+    VehicleSystemStatus VehicleSystemStatus = 16;
+
+    VehicleTelemetryCommand VehicleTelemetryCommand = 17;
+
+    VehicleTerminationCommand VehicleTerminationCommand = 18;
+
+    VehicleWaypointCommand VehicleWaypointCommand = 19;
+
+  }
+
+}

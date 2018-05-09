@@ -36,7 +36,7 @@ namespace protobuf_ProtoPackets_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[19];
+  static const ::google::protobuf::internal::ParseTable schema[20];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -80,6 +80,8 @@ void InitDefaultsVehicleTerminationCommandImpl();
 void InitDefaultsVehicleTerminationCommand();
 void InitDefaultsVehicleWaypointCommandImpl();
 void InitDefaultsVehicleWaypointCommand();
+void InitDefaultsPacketImpl();
+void InitDefaultsPacket();
 inline void InitDefaults() {
   InitDefaultsAirVehicleGroundRelativeState();
   InitDefaultsArmCommand();
@@ -100,6 +102,7 @@ inline void InitDefaults() {
   InitDefaultsVehicleTelemetryCommand();
   InitDefaultsVehicleTerminationCommand();
   InitDefaultsVehicleWaypointCommand();
+  InitDefaultsPacket();
 }
 }  // namespace protobuf_ProtoPackets_2eproto
 class AirVehicleGroundRelativeState;
@@ -114,6 +117,9 @@ extern ArmPositionDefaultTypeInternal _ArmPosition_default_instance_;
 class Battery;
 class BatteryDefaultTypeInternal;
 extern BatteryDefaultTypeInternal _Battery_default_instance_;
+class Packet;
+class PacketDefaultTypeInternal;
+extern PacketDefaultTypeInternal _Packet_default_instance_;
 class TargetAcknowledgement;
 class TargetAcknowledgementDefaultTypeInternal;
 extern TargetAcknowledgementDefaultTypeInternal _TargetAcknowledgement_default_instance_;
@@ -2517,6 +2523,340 @@ class VehicleWaypointCommand : public ::google::protobuf::Message /* @@protoc_in
   friend struct ::protobuf_ProtoPackets_2eproto::TableStruct;
   friend void ::protobuf_ProtoPackets_2eproto::InitDefaultsVehicleWaypointCommandImpl();
 };
+// -------------------------------------------------------------------
+
+class Packet : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Packet) */ {
+ public:
+  Packet();
+  virtual ~Packet();
+
+  Packet(const Packet& from);
+
+  inline Packet& operator=(const Packet& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Packet(Packet&& from) noexcept
+    : Packet() {
+    *this = ::std::move(from);
+  }
+
+  inline Packet& operator=(Packet&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Packet& default_instance();
+
+  enum PacketCase {
+    kAirVehicleGroundRelativeState = 1,
+    kArmCommand = 2,
+    kArmPosition = 3,
+    kBattery = 4,
+    kTargetAcknowledgement = 5,
+    kTargetDesignationCommand = 6,
+    kTargetStatus = 7,
+    kVehicleAttitude = 8,
+    kVehicleAuthorizationReply = 9,
+    kVehicleAuthorizationRequest = 10,
+    kVehicleBodySensedState = 11,
+    kVehicleGlobalPosition = 12,
+    kVehicleIdentification = 13,
+    kVehicleInertialState = 14,
+    kVehicleModeCommand = 15,
+    kVehicleSystemStatus = 16,
+    kVehicleTelemetryCommand = 17,
+    kVehicleTerminationCommand = 18,
+    kVehicleWaypointCommand = 19,
+    PACKET_NOT_SET = 0,
+  };
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Packet* internal_default_instance() {
+    return reinterpret_cast<const Packet*>(
+               &_Packet_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    19;
+
+  void Swap(Packet* other);
+  friend void swap(Packet& a, Packet& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Packet* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Packet* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Packet& from);
+  void MergeFrom(const Packet& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Packet* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .AirVehicleGroundRelativeState AirVehicleGroundRelativeState = 1;
+  bool has_airvehiclegroundrelativestate() const;
+  void clear_airvehiclegroundrelativestate();
+  static const int kAirVehicleGroundRelativeStateFieldNumber = 1;
+  const ::AirVehicleGroundRelativeState& airvehiclegroundrelativestate() const;
+  ::AirVehicleGroundRelativeState* release_airvehiclegroundrelativestate();
+  ::AirVehicleGroundRelativeState* mutable_airvehiclegroundrelativestate();
+  void set_allocated_airvehiclegroundrelativestate(::AirVehicleGroundRelativeState* airvehiclegroundrelativestate);
+
+  // .ArmCommand ArmCommand = 2;
+  bool has_armcommand() const;
+  void clear_armcommand();
+  static const int kArmCommandFieldNumber = 2;
+  const ::ArmCommand& armcommand() const;
+  ::ArmCommand* release_armcommand();
+  ::ArmCommand* mutable_armcommand();
+  void set_allocated_armcommand(::ArmCommand* armcommand);
+
+  // .ArmPosition ArmPosition = 3;
+  bool has_armposition() const;
+  void clear_armposition();
+  static const int kArmPositionFieldNumber = 3;
+  const ::ArmPosition& armposition() const;
+  ::ArmPosition* release_armposition();
+  ::ArmPosition* mutable_armposition();
+  void set_allocated_armposition(::ArmPosition* armposition);
+
+  // .Battery Battery = 4;
+  bool has_battery() const;
+  void clear_battery();
+  static const int kBatteryFieldNumber = 4;
+  const ::Battery& battery() const;
+  ::Battery* release_battery();
+  ::Battery* mutable_battery();
+  void set_allocated_battery(::Battery* battery);
+
+  // .TargetAcknowledgement TargetAcknowledgement = 5;
+  bool has_targetacknowledgement() const;
+  void clear_targetacknowledgement();
+  static const int kTargetAcknowledgementFieldNumber = 5;
+  const ::TargetAcknowledgement& targetacknowledgement() const;
+  ::TargetAcknowledgement* release_targetacknowledgement();
+  ::TargetAcknowledgement* mutable_targetacknowledgement();
+  void set_allocated_targetacknowledgement(::TargetAcknowledgement* targetacknowledgement);
+
+  // .TargetDesignationCommand TargetDesignationCommand = 6;
+  bool has_targetdesignationcommand() const;
+  void clear_targetdesignationcommand();
+  static const int kTargetDesignationCommandFieldNumber = 6;
+  const ::TargetDesignationCommand& targetdesignationcommand() const;
+  ::TargetDesignationCommand* release_targetdesignationcommand();
+  ::TargetDesignationCommand* mutable_targetdesignationcommand();
+  void set_allocated_targetdesignationcommand(::TargetDesignationCommand* targetdesignationcommand);
+
+  // .TargetStatus TargetStatus = 7;
+  bool has_targetstatus() const;
+  void clear_targetstatus();
+  static const int kTargetStatusFieldNumber = 7;
+  const ::TargetStatus& targetstatus() const;
+  ::TargetStatus* release_targetstatus();
+  ::TargetStatus* mutable_targetstatus();
+  void set_allocated_targetstatus(::TargetStatus* targetstatus);
+
+  // .VehicleAttitude VehicleAttitude = 8;
+  bool has_vehicleattitude() const;
+  void clear_vehicleattitude();
+  static const int kVehicleAttitudeFieldNumber = 8;
+  const ::VehicleAttitude& vehicleattitude() const;
+  ::VehicleAttitude* release_vehicleattitude();
+  ::VehicleAttitude* mutable_vehicleattitude();
+  void set_allocated_vehicleattitude(::VehicleAttitude* vehicleattitude);
+
+  // .VehicleAuthorizationReply VehicleAuthorizationReply = 9;
+  bool has_vehicleauthorizationreply() const;
+  void clear_vehicleauthorizationreply();
+  static const int kVehicleAuthorizationReplyFieldNumber = 9;
+  const ::VehicleAuthorizationReply& vehicleauthorizationreply() const;
+  ::VehicleAuthorizationReply* release_vehicleauthorizationreply();
+  ::VehicleAuthorizationReply* mutable_vehicleauthorizationreply();
+  void set_allocated_vehicleauthorizationreply(::VehicleAuthorizationReply* vehicleauthorizationreply);
+
+  // .VehicleAuthorizationRequest VehicleAuthorizationRequest = 10;
+  bool has_vehicleauthorizationrequest() const;
+  void clear_vehicleauthorizationrequest();
+  static const int kVehicleAuthorizationRequestFieldNumber = 10;
+  const ::VehicleAuthorizationRequest& vehicleauthorizationrequest() const;
+  ::VehicleAuthorizationRequest* release_vehicleauthorizationrequest();
+  ::VehicleAuthorizationRequest* mutable_vehicleauthorizationrequest();
+  void set_allocated_vehicleauthorizationrequest(::VehicleAuthorizationRequest* vehicleauthorizationrequest);
+
+  // .VehicleBodySensedState VehicleBodySensedState = 11;
+  bool has_vehiclebodysensedstate() const;
+  void clear_vehiclebodysensedstate();
+  static const int kVehicleBodySensedStateFieldNumber = 11;
+  const ::VehicleBodySensedState& vehiclebodysensedstate() const;
+  ::VehicleBodySensedState* release_vehiclebodysensedstate();
+  ::VehicleBodySensedState* mutable_vehiclebodysensedstate();
+  void set_allocated_vehiclebodysensedstate(::VehicleBodySensedState* vehiclebodysensedstate);
+
+  // .VehicleGlobalPosition VehicleGlobalPosition = 12;
+  bool has_vehicleglobalposition() const;
+  void clear_vehicleglobalposition();
+  static const int kVehicleGlobalPositionFieldNumber = 12;
+  const ::VehicleGlobalPosition& vehicleglobalposition() const;
+  ::VehicleGlobalPosition* release_vehicleglobalposition();
+  ::VehicleGlobalPosition* mutable_vehicleglobalposition();
+  void set_allocated_vehicleglobalposition(::VehicleGlobalPosition* vehicleglobalposition);
+
+  // .VehicleIdentification VehicleIdentification = 13;
+  bool has_vehicleidentification() const;
+  void clear_vehicleidentification();
+  static const int kVehicleIdentificationFieldNumber = 13;
+  const ::VehicleIdentification& vehicleidentification() const;
+  ::VehicleIdentification* release_vehicleidentification();
+  ::VehicleIdentification* mutable_vehicleidentification();
+  void set_allocated_vehicleidentification(::VehicleIdentification* vehicleidentification);
+
+  // .VehicleInertialState VehicleInertialState = 14;
+  bool has_vehicleinertialstate() const;
+  void clear_vehicleinertialstate();
+  static const int kVehicleInertialStateFieldNumber = 14;
+  const ::VehicleInertialState& vehicleinertialstate() const;
+  ::VehicleInertialState* release_vehicleinertialstate();
+  ::VehicleInertialState* mutable_vehicleinertialstate();
+  void set_allocated_vehicleinertialstate(::VehicleInertialState* vehicleinertialstate);
+
+  // .VehicleModeCommand VehicleModeCommand = 15;
+  bool has_vehiclemodecommand() const;
+  void clear_vehiclemodecommand();
+  static const int kVehicleModeCommandFieldNumber = 15;
+  const ::VehicleModeCommand& vehiclemodecommand() const;
+  ::VehicleModeCommand* release_vehiclemodecommand();
+  ::VehicleModeCommand* mutable_vehiclemodecommand();
+  void set_allocated_vehiclemodecommand(::VehicleModeCommand* vehiclemodecommand);
+
+  // .VehicleSystemStatus VehicleSystemStatus = 16;
+  bool has_vehiclesystemstatus() const;
+  void clear_vehiclesystemstatus();
+  static const int kVehicleSystemStatusFieldNumber = 16;
+  const ::VehicleSystemStatus& vehiclesystemstatus() const;
+  ::VehicleSystemStatus* release_vehiclesystemstatus();
+  ::VehicleSystemStatus* mutable_vehiclesystemstatus();
+  void set_allocated_vehiclesystemstatus(::VehicleSystemStatus* vehiclesystemstatus);
+
+  // .VehicleTelemetryCommand VehicleTelemetryCommand = 17;
+  bool has_vehicletelemetrycommand() const;
+  void clear_vehicletelemetrycommand();
+  static const int kVehicleTelemetryCommandFieldNumber = 17;
+  const ::VehicleTelemetryCommand& vehicletelemetrycommand() const;
+  ::VehicleTelemetryCommand* release_vehicletelemetrycommand();
+  ::VehicleTelemetryCommand* mutable_vehicletelemetrycommand();
+  void set_allocated_vehicletelemetrycommand(::VehicleTelemetryCommand* vehicletelemetrycommand);
+
+  // .VehicleTerminationCommand VehicleTerminationCommand = 18;
+  bool has_vehicleterminationcommand() const;
+  void clear_vehicleterminationcommand();
+  static const int kVehicleTerminationCommandFieldNumber = 18;
+  const ::VehicleTerminationCommand& vehicleterminationcommand() const;
+  ::VehicleTerminationCommand* release_vehicleterminationcommand();
+  ::VehicleTerminationCommand* mutable_vehicleterminationcommand();
+  void set_allocated_vehicleterminationcommand(::VehicleTerminationCommand* vehicleterminationcommand);
+
+  // .VehicleWaypointCommand VehicleWaypointCommand = 19;
+  bool has_vehiclewaypointcommand() const;
+  void clear_vehiclewaypointcommand();
+  static const int kVehicleWaypointCommandFieldNumber = 19;
+  const ::VehicleWaypointCommand& vehiclewaypointcommand() const;
+  ::VehicleWaypointCommand* release_vehiclewaypointcommand();
+  ::VehicleWaypointCommand* mutable_vehiclewaypointcommand();
+  void set_allocated_vehiclewaypointcommand(::VehicleWaypointCommand* vehiclewaypointcommand);
+
+  PacketCase packet_case() const;
+  // @@protoc_insertion_point(class_scope:Packet)
+ private:
+  void set_has_airvehiclegroundrelativestate();
+  void set_has_armcommand();
+  void set_has_armposition();
+  void set_has_battery();
+  void set_has_targetacknowledgement();
+  void set_has_targetdesignationcommand();
+  void set_has_targetstatus();
+  void set_has_vehicleattitude();
+  void set_has_vehicleauthorizationreply();
+  void set_has_vehicleauthorizationrequest();
+  void set_has_vehiclebodysensedstate();
+  void set_has_vehicleglobalposition();
+  void set_has_vehicleidentification();
+  void set_has_vehicleinertialstate();
+  void set_has_vehiclemodecommand();
+  void set_has_vehiclesystemstatus();
+  void set_has_vehicletelemetrycommand();
+  void set_has_vehicleterminationcommand();
+  void set_has_vehiclewaypointcommand();
+
+  inline bool has_packet() const;
+  void clear_packet();
+  inline void clear_has_packet();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  union PacketUnion {
+    PacketUnion() {}
+    ::AirVehicleGroundRelativeState* airvehiclegroundrelativestate_;
+    ::ArmCommand* armcommand_;
+    ::ArmPosition* armposition_;
+    ::Battery* battery_;
+    ::TargetAcknowledgement* targetacknowledgement_;
+    ::TargetDesignationCommand* targetdesignationcommand_;
+    ::TargetStatus* targetstatus_;
+    ::VehicleAttitude* vehicleattitude_;
+    ::VehicleAuthorizationReply* vehicleauthorizationreply_;
+    ::VehicleAuthorizationRequest* vehicleauthorizationrequest_;
+    ::VehicleBodySensedState* vehiclebodysensedstate_;
+    ::VehicleGlobalPosition* vehicleglobalposition_;
+    ::VehicleIdentification* vehicleidentification_;
+    ::VehicleInertialState* vehicleinertialstate_;
+    ::VehicleModeCommand* vehiclemodecommand_;
+    ::VehicleSystemStatus* vehiclesystemstatus_;
+    ::VehicleTelemetryCommand* vehicletelemetrycommand_;
+    ::VehicleTerminationCommand* vehicleterminationcommand_;
+    ::VehicleWaypointCommand* vehiclewaypointcommand_;
+  } packet_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _oneof_case_[1];
+
+  friend struct ::protobuf_ProtoPackets_2eproto::TableStruct;
+  friend void ::protobuf_ProtoPackets_2eproto::InitDefaultsPacketImpl();
+};
 // ===================================================================
 
 
@@ -3818,9 +4158,784 @@ inline void VehicleWaypointCommand::set_altitude(float value) {
   // @@protoc_insertion_point(field_set:VehicleWaypointCommand.altitude)
 }
 
+// -------------------------------------------------------------------
+
+// Packet
+
+// .AirVehicleGroundRelativeState AirVehicleGroundRelativeState = 1;
+inline bool Packet::has_airvehiclegroundrelativestate() const {
+  return packet_case() == kAirVehicleGroundRelativeState;
+}
+inline void Packet::set_has_airvehiclegroundrelativestate() {
+  _oneof_case_[0] = kAirVehicleGroundRelativeState;
+}
+inline void Packet::clear_airvehiclegroundrelativestate() {
+  if (has_airvehiclegroundrelativestate()) {
+    delete packet_.airvehiclegroundrelativestate_;
+    clear_has_packet();
+  }
+}
+inline ::AirVehicleGroundRelativeState* Packet::release_airvehiclegroundrelativestate() {
+  // @@protoc_insertion_point(field_release:Packet.AirVehicleGroundRelativeState)
+  if (has_airvehiclegroundrelativestate()) {
+    clear_has_packet();
+      ::AirVehicleGroundRelativeState* temp = packet_.airvehiclegroundrelativestate_;
+    packet_.airvehiclegroundrelativestate_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::AirVehicleGroundRelativeState& Packet::airvehiclegroundrelativestate() const {
+  // @@protoc_insertion_point(field_get:Packet.AirVehicleGroundRelativeState)
+  return has_airvehiclegroundrelativestate()
+      ? *packet_.airvehiclegroundrelativestate_
+      : *reinterpret_cast< ::AirVehicleGroundRelativeState*>(&::_AirVehicleGroundRelativeState_default_instance_);
+}
+inline ::AirVehicleGroundRelativeState* Packet::mutable_airvehiclegroundrelativestate() {
+  if (!has_airvehiclegroundrelativestate()) {
+    clear_packet();
+    set_has_airvehiclegroundrelativestate();
+    packet_.airvehiclegroundrelativestate_ = new ::AirVehicleGroundRelativeState;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.AirVehicleGroundRelativeState)
+  return packet_.airvehiclegroundrelativestate_;
+}
+
+// .ArmCommand ArmCommand = 2;
+inline bool Packet::has_armcommand() const {
+  return packet_case() == kArmCommand;
+}
+inline void Packet::set_has_armcommand() {
+  _oneof_case_[0] = kArmCommand;
+}
+inline void Packet::clear_armcommand() {
+  if (has_armcommand()) {
+    delete packet_.armcommand_;
+    clear_has_packet();
+  }
+}
+inline ::ArmCommand* Packet::release_armcommand() {
+  // @@protoc_insertion_point(field_release:Packet.ArmCommand)
+  if (has_armcommand()) {
+    clear_has_packet();
+      ::ArmCommand* temp = packet_.armcommand_;
+    packet_.armcommand_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::ArmCommand& Packet::armcommand() const {
+  // @@protoc_insertion_point(field_get:Packet.ArmCommand)
+  return has_armcommand()
+      ? *packet_.armcommand_
+      : *reinterpret_cast< ::ArmCommand*>(&::_ArmCommand_default_instance_);
+}
+inline ::ArmCommand* Packet::mutable_armcommand() {
+  if (!has_armcommand()) {
+    clear_packet();
+    set_has_armcommand();
+    packet_.armcommand_ = new ::ArmCommand;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.ArmCommand)
+  return packet_.armcommand_;
+}
+
+// .ArmPosition ArmPosition = 3;
+inline bool Packet::has_armposition() const {
+  return packet_case() == kArmPosition;
+}
+inline void Packet::set_has_armposition() {
+  _oneof_case_[0] = kArmPosition;
+}
+inline void Packet::clear_armposition() {
+  if (has_armposition()) {
+    delete packet_.armposition_;
+    clear_has_packet();
+  }
+}
+inline ::ArmPosition* Packet::release_armposition() {
+  // @@protoc_insertion_point(field_release:Packet.ArmPosition)
+  if (has_armposition()) {
+    clear_has_packet();
+      ::ArmPosition* temp = packet_.armposition_;
+    packet_.armposition_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::ArmPosition& Packet::armposition() const {
+  // @@protoc_insertion_point(field_get:Packet.ArmPosition)
+  return has_armposition()
+      ? *packet_.armposition_
+      : *reinterpret_cast< ::ArmPosition*>(&::_ArmPosition_default_instance_);
+}
+inline ::ArmPosition* Packet::mutable_armposition() {
+  if (!has_armposition()) {
+    clear_packet();
+    set_has_armposition();
+    packet_.armposition_ = new ::ArmPosition;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.ArmPosition)
+  return packet_.armposition_;
+}
+
+// .Battery Battery = 4;
+inline bool Packet::has_battery() const {
+  return packet_case() == kBattery;
+}
+inline void Packet::set_has_battery() {
+  _oneof_case_[0] = kBattery;
+}
+inline void Packet::clear_battery() {
+  if (has_battery()) {
+    delete packet_.battery_;
+    clear_has_packet();
+  }
+}
+inline ::Battery* Packet::release_battery() {
+  // @@protoc_insertion_point(field_release:Packet.Battery)
+  if (has_battery()) {
+    clear_has_packet();
+      ::Battery* temp = packet_.battery_;
+    packet_.battery_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::Battery& Packet::battery() const {
+  // @@protoc_insertion_point(field_get:Packet.Battery)
+  return has_battery()
+      ? *packet_.battery_
+      : *reinterpret_cast< ::Battery*>(&::_Battery_default_instance_);
+}
+inline ::Battery* Packet::mutable_battery() {
+  if (!has_battery()) {
+    clear_packet();
+    set_has_battery();
+    packet_.battery_ = new ::Battery;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.Battery)
+  return packet_.battery_;
+}
+
+// .TargetAcknowledgement TargetAcknowledgement = 5;
+inline bool Packet::has_targetacknowledgement() const {
+  return packet_case() == kTargetAcknowledgement;
+}
+inline void Packet::set_has_targetacknowledgement() {
+  _oneof_case_[0] = kTargetAcknowledgement;
+}
+inline void Packet::clear_targetacknowledgement() {
+  if (has_targetacknowledgement()) {
+    delete packet_.targetacknowledgement_;
+    clear_has_packet();
+  }
+}
+inline ::TargetAcknowledgement* Packet::release_targetacknowledgement() {
+  // @@protoc_insertion_point(field_release:Packet.TargetAcknowledgement)
+  if (has_targetacknowledgement()) {
+    clear_has_packet();
+      ::TargetAcknowledgement* temp = packet_.targetacknowledgement_;
+    packet_.targetacknowledgement_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::TargetAcknowledgement& Packet::targetacknowledgement() const {
+  // @@protoc_insertion_point(field_get:Packet.TargetAcknowledgement)
+  return has_targetacknowledgement()
+      ? *packet_.targetacknowledgement_
+      : *reinterpret_cast< ::TargetAcknowledgement*>(&::_TargetAcknowledgement_default_instance_);
+}
+inline ::TargetAcknowledgement* Packet::mutable_targetacknowledgement() {
+  if (!has_targetacknowledgement()) {
+    clear_packet();
+    set_has_targetacknowledgement();
+    packet_.targetacknowledgement_ = new ::TargetAcknowledgement;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.TargetAcknowledgement)
+  return packet_.targetacknowledgement_;
+}
+
+// .TargetDesignationCommand TargetDesignationCommand = 6;
+inline bool Packet::has_targetdesignationcommand() const {
+  return packet_case() == kTargetDesignationCommand;
+}
+inline void Packet::set_has_targetdesignationcommand() {
+  _oneof_case_[0] = kTargetDesignationCommand;
+}
+inline void Packet::clear_targetdesignationcommand() {
+  if (has_targetdesignationcommand()) {
+    delete packet_.targetdesignationcommand_;
+    clear_has_packet();
+  }
+}
+inline ::TargetDesignationCommand* Packet::release_targetdesignationcommand() {
+  // @@protoc_insertion_point(field_release:Packet.TargetDesignationCommand)
+  if (has_targetdesignationcommand()) {
+    clear_has_packet();
+      ::TargetDesignationCommand* temp = packet_.targetdesignationcommand_;
+    packet_.targetdesignationcommand_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::TargetDesignationCommand& Packet::targetdesignationcommand() const {
+  // @@protoc_insertion_point(field_get:Packet.TargetDesignationCommand)
+  return has_targetdesignationcommand()
+      ? *packet_.targetdesignationcommand_
+      : *reinterpret_cast< ::TargetDesignationCommand*>(&::_TargetDesignationCommand_default_instance_);
+}
+inline ::TargetDesignationCommand* Packet::mutable_targetdesignationcommand() {
+  if (!has_targetdesignationcommand()) {
+    clear_packet();
+    set_has_targetdesignationcommand();
+    packet_.targetdesignationcommand_ = new ::TargetDesignationCommand;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.TargetDesignationCommand)
+  return packet_.targetdesignationcommand_;
+}
+
+// .TargetStatus TargetStatus = 7;
+inline bool Packet::has_targetstatus() const {
+  return packet_case() == kTargetStatus;
+}
+inline void Packet::set_has_targetstatus() {
+  _oneof_case_[0] = kTargetStatus;
+}
+inline void Packet::clear_targetstatus() {
+  if (has_targetstatus()) {
+    delete packet_.targetstatus_;
+    clear_has_packet();
+  }
+}
+inline ::TargetStatus* Packet::release_targetstatus() {
+  // @@protoc_insertion_point(field_release:Packet.TargetStatus)
+  if (has_targetstatus()) {
+    clear_has_packet();
+      ::TargetStatus* temp = packet_.targetstatus_;
+    packet_.targetstatus_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::TargetStatus& Packet::targetstatus() const {
+  // @@protoc_insertion_point(field_get:Packet.TargetStatus)
+  return has_targetstatus()
+      ? *packet_.targetstatus_
+      : *reinterpret_cast< ::TargetStatus*>(&::_TargetStatus_default_instance_);
+}
+inline ::TargetStatus* Packet::mutable_targetstatus() {
+  if (!has_targetstatus()) {
+    clear_packet();
+    set_has_targetstatus();
+    packet_.targetstatus_ = new ::TargetStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.TargetStatus)
+  return packet_.targetstatus_;
+}
+
+// .VehicleAttitude VehicleAttitude = 8;
+inline bool Packet::has_vehicleattitude() const {
+  return packet_case() == kVehicleAttitude;
+}
+inline void Packet::set_has_vehicleattitude() {
+  _oneof_case_[0] = kVehicleAttitude;
+}
+inline void Packet::clear_vehicleattitude() {
+  if (has_vehicleattitude()) {
+    delete packet_.vehicleattitude_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleAttitude* Packet::release_vehicleattitude() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleAttitude)
+  if (has_vehicleattitude()) {
+    clear_has_packet();
+      ::VehicleAttitude* temp = packet_.vehicleattitude_;
+    packet_.vehicleattitude_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleAttitude& Packet::vehicleattitude() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleAttitude)
+  return has_vehicleattitude()
+      ? *packet_.vehicleattitude_
+      : *reinterpret_cast< ::VehicleAttitude*>(&::_VehicleAttitude_default_instance_);
+}
+inline ::VehicleAttitude* Packet::mutable_vehicleattitude() {
+  if (!has_vehicleattitude()) {
+    clear_packet();
+    set_has_vehicleattitude();
+    packet_.vehicleattitude_ = new ::VehicleAttitude;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleAttitude)
+  return packet_.vehicleattitude_;
+}
+
+// .VehicleAuthorizationReply VehicleAuthorizationReply = 9;
+inline bool Packet::has_vehicleauthorizationreply() const {
+  return packet_case() == kVehicleAuthorizationReply;
+}
+inline void Packet::set_has_vehicleauthorizationreply() {
+  _oneof_case_[0] = kVehicleAuthorizationReply;
+}
+inline void Packet::clear_vehicleauthorizationreply() {
+  if (has_vehicleauthorizationreply()) {
+    delete packet_.vehicleauthorizationreply_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleAuthorizationReply* Packet::release_vehicleauthorizationreply() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleAuthorizationReply)
+  if (has_vehicleauthorizationreply()) {
+    clear_has_packet();
+      ::VehicleAuthorizationReply* temp = packet_.vehicleauthorizationreply_;
+    packet_.vehicleauthorizationreply_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleAuthorizationReply& Packet::vehicleauthorizationreply() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleAuthorizationReply)
+  return has_vehicleauthorizationreply()
+      ? *packet_.vehicleauthorizationreply_
+      : *reinterpret_cast< ::VehicleAuthorizationReply*>(&::_VehicleAuthorizationReply_default_instance_);
+}
+inline ::VehicleAuthorizationReply* Packet::mutable_vehicleauthorizationreply() {
+  if (!has_vehicleauthorizationreply()) {
+    clear_packet();
+    set_has_vehicleauthorizationreply();
+    packet_.vehicleauthorizationreply_ = new ::VehicleAuthorizationReply;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleAuthorizationReply)
+  return packet_.vehicleauthorizationreply_;
+}
+
+// .VehicleAuthorizationRequest VehicleAuthorizationRequest = 10;
+inline bool Packet::has_vehicleauthorizationrequest() const {
+  return packet_case() == kVehicleAuthorizationRequest;
+}
+inline void Packet::set_has_vehicleauthorizationrequest() {
+  _oneof_case_[0] = kVehicleAuthorizationRequest;
+}
+inline void Packet::clear_vehicleauthorizationrequest() {
+  if (has_vehicleauthorizationrequest()) {
+    delete packet_.vehicleauthorizationrequest_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleAuthorizationRequest* Packet::release_vehicleauthorizationrequest() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleAuthorizationRequest)
+  if (has_vehicleauthorizationrequest()) {
+    clear_has_packet();
+      ::VehicleAuthorizationRequest* temp = packet_.vehicleauthorizationrequest_;
+    packet_.vehicleauthorizationrequest_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleAuthorizationRequest& Packet::vehicleauthorizationrequest() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleAuthorizationRequest)
+  return has_vehicleauthorizationrequest()
+      ? *packet_.vehicleauthorizationrequest_
+      : *reinterpret_cast< ::VehicleAuthorizationRequest*>(&::_VehicleAuthorizationRequest_default_instance_);
+}
+inline ::VehicleAuthorizationRequest* Packet::mutable_vehicleauthorizationrequest() {
+  if (!has_vehicleauthorizationrequest()) {
+    clear_packet();
+    set_has_vehicleauthorizationrequest();
+    packet_.vehicleauthorizationrequest_ = new ::VehicleAuthorizationRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleAuthorizationRequest)
+  return packet_.vehicleauthorizationrequest_;
+}
+
+// .VehicleBodySensedState VehicleBodySensedState = 11;
+inline bool Packet::has_vehiclebodysensedstate() const {
+  return packet_case() == kVehicleBodySensedState;
+}
+inline void Packet::set_has_vehiclebodysensedstate() {
+  _oneof_case_[0] = kVehicleBodySensedState;
+}
+inline void Packet::clear_vehiclebodysensedstate() {
+  if (has_vehiclebodysensedstate()) {
+    delete packet_.vehiclebodysensedstate_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleBodySensedState* Packet::release_vehiclebodysensedstate() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleBodySensedState)
+  if (has_vehiclebodysensedstate()) {
+    clear_has_packet();
+      ::VehicleBodySensedState* temp = packet_.vehiclebodysensedstate_;
+    packet_.vehiclebodysensedstate_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleBodySensedState& Packet::vehiclebodysensedstate() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleBodySensedState)
+  return has_vehiclebodysensedstate()
+      ? *packet_.vehiclebodysensedstate_
+      : *reinterpret_cast< ::VehicleBodySensedState*>(&::_VehicleBodySensedState_default_instance_);
+}
+inline ::VehicleBodySensedState* Packet::mutable_vehiclebodysensedstate() {
+  if (!has_vehiclebodysensedstate()) {
+    clear_packet();
+    set_has_vehiclebodysensedstate();
+    packet_.vehiclebodysensedstate_ = new ::VehicleBodySensedState;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleBodySensedState)
+  return packet_.vehiclebodysensedstate_;
+}
+
+// .VehicleGlobalPosition VehicleGlobalPosition = 12;
+inline bool Packet::has_vehicleglobalposition() const {
+  return packet_case() == kVehicleGlobalPosition;
+}
+inline void Packet::set_has_vehicleglobalposition() {
+  _oneof_case_[0] = kVehicleGlobalPosition;
+}
+inline void Packet::clear_vehicleglobalposition() {
+  if (has_vehicleglobalposition()) {
+    delete packet_.vehicleglobalposition_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleGlobalPosition* Packet::release_vehicleglobalposition() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleGlobalPosition)
+  if (has_vehicleglobalposition()) {
+    clear_has_packet();
+      ::VehicleGlobalPosition* temp = packet_.vehicleglobalposition_;
+    packet_.vehicleglobalposition_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleGlobalPosition& Packet::vehicleglobalposition() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleGlobalPosition)
+  return has_vehicleglobalposition()
+      ? *packet_.vehicleglobalposition_
+      : *reinterpret_cast< ::VehicleGlobalPosition*>(&::_VehicleGlobalPosition_default_instance_);
+}
+inline ::VehicleGlobalPosition* Packet::mutable_vehicleglobalposition() {
+  if (!has_vehicleglobalposition()) {
+    clear_packet();
+    set_has_vehicleglobalposition();
+    packet_.vehicleglobalposition_ = new ::VehicleGlobalPosition;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleGlobalPosition)
+  return packet_.vehicleglobalposition_;
+}
+
+// .VehicleIdentification VehicleIdentification = 13;
+inline bool Packet::has_vehicleidentification() const {
+  return packet_case() == kVehicleIdentification;
+}
+inline void Packet::set_has_vehicleidentification() {
+  _oneof_case_[0] = kVehicleIdentification;
+}
+inline void Packet::clear_vehicleidentification() {
+  if (has_vehicleidentification()) {
+    delete packet_.vehicleidentification_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleIdentification* Packet::release_vehicleidentification() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleIdentification)
+  if (has_vehicleidentification()) {
+    clear_has_packet();
+      ::VehicleIdentification* temp = packet_.vehicleidentification_;
+    packet_.vehicleidentification_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleIdentification& Packet::vehicleidentification() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleIdentification)
+  return has_vehicleidentification()
+      ? *packet_.vehicleidentification_
+      : *reinterpret_cast< ::VehicleIdentification*>(&::_VehicleIdentification_default_instance_);
+}
+inline ::VehicleIdentification* Packet::mutable_vehicleidentification() {
+  if (!has_vehicleidentification()) {
+    clear_packet();
+    set_has_vehicleidentification();
+    packet_.vehicleidentification_ = new ::VehicleIdentification;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleIdentification)
+  return packet_.vehicleidentification_;
+}
+
+// .VehicleInertialState VehicleInertialState = 14;
+inline bool Packet::has_vehicleinertialstate() const {
+  return packet_case() == kVehicleInertialState;
+}
+inline void Packet::set_has_vehicleinertialstate() {
+  _oneof_case_[0] = kVehicleInertialState;
+}
+inline void Packet::clear_vehicleinertialstate() {
+  if (has_vehicleinertialstate()) {
+    delete packet_.vehicleinertialstate_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleInertialState* Packet::release_vehicleinertialstate() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleInertialState)
+  if (has_vehicleinertialstate()) {
+    clear_has_packet();
+      ::VehicleInertialState* temp = packet_.vehicleinertialstate_;
+    packet_.vehicleinertialstate_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleInertialState& Packet::vehicleinertialstate() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleInertialState)
+  return has_vehicleinertialstate()
+      ? *packet_.vehicleinertialstate_
+      : *reinterpret_cast< ::VehicleInertialState*>(&::_VehicleInertialState_default_instance_);
+}
+inline ::VehicleInertialState* Packet::mutable_vehicleinertialstate() {
+  if (!has_vehicleinertialstate()) {
+    clear_packet();
+    set_has_vehicleinertialstate();
+    packet_.vehicleinertialstate_ = new ::VehicleInertialState;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleInertialState)
+  return packet_.vehicleinertialstate_;
+}
+
+// .VehicleModeCommand VehicleModeCommand = 15;
+inline bool Packet::has_vehiclemodecommand() const {
+  return packet_case() == kVehicleModeCommand;
+}
+inline void Packet::set_has_vehiclemodecommand() {
+  _oneof_case_[0] = kVehicleModeCommand;
+}
+inline void Packet::clear_vehiclemodecommand() {
+  if (has_vehiclemodecommand()) {
+    delete packet_.vehiclemodecommand_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleModeCommand* Packet::release_vehiclemodecommand() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleModeCommand)
+  if (has_vehiclemodecommand()) {
+    clear_has_packet();
+      ::VehicleModeCommand* temp = packet_.vehiclemodecommand_;
+    packet_.vehiclemodecommand_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleModeCommand& Packet::vehiclemodecommand() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleModeCommand)
+  return has_vehiclemodecommand()
+      ? *packet_.vehiclemodecommand_
+      : *reinterpret_cast< ::VehicleModeCommand*>(&::_VehicleModeCommand_default_instance_);
+}
+inline ::VehicleModeCommand* Packet::mutable_vehiclemodecommand() {
+  if (!has_vehiclemodecommand()) {
+    clear_packet();
+    set_has_vehiclemodecommand();
+    packet_.vehiclemodecommand_ = new ::VehicleModeCommand;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleModeCommand)
+  return packet_.vehiclemodecommand_;
+}
+
+// .VehicleSystemStatus VehicleSystemStatus = 16;
+inline bool Packet::has_vehiclesystemstatus() const {
+  return packet_case() == kVehicleSystemStatus;
+}
+inline void Packet::set_has_vehiclesystemstatus() {
+  _oneof_case_[0] = kVehicleSystemStatus;
+}
+inline void Packet::clear_vehiclesystemstatus() {
+  if (has_vehiclesystemstatus()) {
+    delete packet_.vehiclesystemstatus_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleSystemStatus* Packet::release_vehiclesystemstatus() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleSystemStatus)
+  if (has_vehiclesystemstatus()) {
+    clear_has_packet();
+      ::VehicleSystemStatus* temp = packet_.vehiclesystemstatus_;
+    packet_.vehiclesystemstatus_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleSystemStatus& Packet::vehiclesystemstatus() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleSystemStatus)
+  return has_vehiclesystemstatus()
+      ? *packet_.vehiclesystemstatus_
+      : *reinterpret_cast< ::VehicleSystemStatus*>(&::_VehicleSystemStatus_default_instance_);
+}
+inline ::VehicleSystemStatus* Packet::mutable_vehiclesystemstatus() {
+  if (!has_vehiclesystemstatus()) {
+    clear_packet();
+    set_has_vehiclesystemstatus();
+    packet_.vehiclesystemstatus_ = new ::VehicleSystemStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleSystemStatus)
+  return packet_.vehiclesystemstatus_;
+}
+
+// .VehicleTelemetryCommand VehicleTelemetryCommand = 17;
+inline bool Packet::has_vehicletelemetrycommand() const {
+  return packet_case() == kVehicleTelemetryCommand;
+}
+inline void Packet::set_has_vehicletelemetrycommand() {
+  _oneof_case_[0] = kVehicleTelemetryCommand;
+}
+inline void Packet::clear_vehicletelemetrycommand() {
+  if (has_vehicletelemetrycommand()) {
+    delete packet_.vehicletelemetrycommand_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleTelemetryCommand* Packet::release_vehicletelemetrycommand() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleTelemetryCommand)
+  if (has_vehicletelemetrycommand()) {
+    clear_has_packet();
+      ::VehicleTelemetryCommand* temp = packet_.vehicletelemetrycommand_;
+    packet_.vehicletelemetrycommand_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleTelemetryCommand& Packet::vehicletelemetrycommand() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleTelemetryCommand)
+  return has_vehicletelemetrycommand()
+      ? *packet_.vehicletelemetrycommand_
+      : *reinterpret_cast< ::VehicleTelemetryCommand*>(&::_VehicleTelemetryCommand_default_instance_);
+}
+inline ::VehicleTelemetryCommand* Packet::mutable_vehicletelemetrycommand() {
+  if (!has_vehicletelemetrycommand()) {
+    clear_packet();
+    set_has_vehicletelemetrycommand();
+    packet_.vehicletelemetrycommand_ = new ::VehicleTelemetryCommand;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleTelemetryCommand)
+  return packet_.vehicletelemetrycommand_;
+}
+
+// .VehicleTerminationCommand VehicleTerminationCommand = 18;
+inline bool Packet::has_vehicleterminationcommand() const {
+  return packet_case() == kVehicleTerminationCommand;
+}
+inline void Packet::set_has_vehicleterminationcommand() {
+  _oneof_case_[0] = kVehicleTerminationCommand;
+}
+inline void Packet::clear_vehicleterminationcommand() {
+  if (has_vehicleterminationcommand()) {
+    delete packet_.vehicleterminationcommand_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleTerminationCommand* Packet::release_vehicleterminationcommand() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleTerminationCommand)
+  if (has_vehicleterminationcommand()) {
+    clear_has_packet();
+      ::VehicleTerminationCommand* temp = packet_.vehicleterminationcommand_;
+    packet_.vehicleterminationcommand_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleTerminationCommand& Packet::vehicleterminationcommand() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleTerminationCommand)
+  return has_vehicleterminationcommand()
+      ? *packet_.vehicleterminationcommand_
+      : *reinterpret_cast< ::VehicleTerminationCommand*>(&::_VehicleTerminationCommand_default_instance_);
+}
+inline ::VehicleTerminationCommand* Packet::mutable_vehicleterminationcommand() {
+  if (!has_vehicleterminationcommand()) {
+    clear_packet();
+    set_has_vehicleterminationcommand();
+    packet_.vehicleterminationcommand_ = new ::VehicleTerminationCommand;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleTerminationCommand)
+  return packet_.vehicleterminationcommand_;
+}
+
+// .VehicleWaypointCommand VehicleWaypointCommand = 19;
+inline bool Packet::has_vehiclewaypointcommand() const {
+  return packet_case() == kVehicleWaypointCommand;
+}
+inline void Packet::set_has_vehiclewaypointcommand() {
+  _oneof_case_[0] = kVehicleWaypointCommand;
+}
+inline void Packet::clear_vehiclewaypointcommand() {
+  if (has_vehiclewaypointcommand()) {
+    delete packet_.vehiclewaypointcommand_;
+    clear_has_packet();
+  }
+}
+inline ::VehicleWaypointCommand* Packet::release_vehiclewaypointcommand() {
+  // @@protoc_insertion_point(field_release:Packet.VehicleWaypointCommand)
+  if (has_vehiclewaypointcommand()) {
+    clear_has_packet();
+      ::VehicleWaypointCommand* temp = packet_.vehiclewaypointcommand_;
+    packet_.vehiclewaypointcommand_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::VehicleWaypointCommand& Packet::vehiclewaypointcommand() const {
+  // @@protoc_insertion_point(field_get:Packet.VehicleWaypointCommand)
+  return has_vehiclewaypointcommand()
+      ? *packet_.vehiclewaypointcommand_
+      : *reinterpret_cast< ::VehicleWaypointCommand*>(&::_VehicleWaypointCommand_default_instance_);
+}
+inline ::VehicleWaypointCommand* Packet::mutable_vehiclewaypointcommand() {
+  if (!has_vehiclewaypointcommand()) {
+    clear_packet();
+    set_has_vehiclewaypointcommand();
+    packet_.vehiclewaypointcommand_ = new ::VehicleWaypointCommand;
+  }
+  // @@protoc_insertion_point(field_mutable:Packet.VehicleWaypointCommand)
+  return packet_.vehiclewaypointcommand_;
+}
+
+inline bool Packet::has_packet() const {
+  return packet_case() != PACKET_NOT_SET;
+}
+inline void Packet::clear_has_packet() {
+  _oneof_case_[0] = PACKET_NOT_SET;
+}
+inline Packet::PacketCase Packet::packet_case() const {
+  return Packet::PacketCase(_oneof_case_[0]);
+}
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

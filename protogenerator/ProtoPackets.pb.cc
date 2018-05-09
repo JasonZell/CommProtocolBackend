@@ -114,6 +114,30 @@ class VehicleWaypointCommandDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<VehicleWaypointCommand>
       _instance;
 } _VehicleWaypointCommand_default_instance_;
+class PacketDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Packet>
+      _instance;
+  const ::AirVehicleGroundRelativeState* airvehiclegroundrelativestate_;
+  const ::ArmCommand* armcommand_;
+  const ::ArmPosition* armposition_;
+  const ::Battery* battery_;
+  const ::TargetAcknowledgement* targetacknowledgement_;
+  const ::TargetDesignationCommand* targetdesignationcommand_;
+  const ::TargetStatus* targetstatus_;
+  const ::VehicleAttitude* vehicleattitude_;
+  const ::VehicleAuthorizationReply* vehicleauthorizationreply_;
+  const ::VehicleAuthorizationRequest* vehicleauthorizationrequest_;
+  const ::VehicleBodySensedState* vehiclebodysensedstate_;
+  const ::VehicleGlobalPosition* vehicleglobalposition_;
+  const ::VehicleIdentification* vehicleidentification_;
+  const ::VehicleInertialState* vehicleinertialstate_;
+  const ::VehicleModeCommand* vehiclemodecommand_;
+  const ::VehicleSystemStatus* vehiclesystemstatus_;
+  const ::VehicleTelemetryCommand* vehicletelemetrycommand_;
+  const ::VehicleTerminationCommand* vehicleterminationcommand_;
+  const ::VehicleWaypointCommand* vehiclewaypointcommand_;
+} _Packet_default_instance_;
 namespace protobuf_ProtoPackets_2eproto {
 void InitDefaultsAirVehicleGroundRelativeStateImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -514,7 +538,47 @@ void InitDefaultsVehicleWaypointCommand() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsVehicleWaypointCommandImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata[19];
+void InitDefaultsPacketImpl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_ProtoPackets_2eproto::InitDefaultsAirVehicleGroundRelativeState();
+  protobuf_ProtoPackets_2eproto::InitDefaultsArmCommand();
+  protobuf_ProtoPackets_2eproto::InitDefaultsArmPosition();
+  protobuf_ProtoPackets_2eproto::InitDefaultsBattery();
+  protobuf_ProtoPackets_2eproto::InitDefaultsTargetAcknowledgement();
+  protobuf_ProtoPackets_2eproto::InitDefaultsTargetDesignationCommand();
+  protobuf_ProtoPackets_2eproto::InitDefaultsTargetStatus();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleAttitude();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleAuthorizationReply();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleAuthorizationRequest();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleBodySensedState();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleGlobalPosition();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleIdentification();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleInertialState();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleModeCommand();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleSystemStatus();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleTelemetryCommand();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleTerminationCommand();
+  protobuf_ProtoPackets_2eproto::InitDefaultsVehicleWaypointCommand();
+  {
+    void* ptr = &::_Packet_default_instance_;
+    new (ptr) ::Packet();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::Packet::InitAsDefaultInstance();
+}
+
+void InitDefaultsPacket() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPacketImpl);
+}
+
+::google::protobuf::Metadata file_level_metadata[20];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -699,6 +763,31 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::VehicleWaypointCommand, longitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::VehicleWaypointCommand, latitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::VehicleWaypointCommand, altitude_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Packet, _internal_metadata_),
+  ~0u,  // no _extensions_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Packet, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  offsetof(::PacketDefaultTypeInternal, airvehiclegroundrelativestate_),
+  offsetof(::PacketDefaultTypeInternal, armcommand_),
+  offsetof(::PacketDefaultTypeInternal, armposition_),
+  offsetof(::PacketDefaultTypeInternal, battery_),
+  offsetof(::PacketDefaultTypeInternal, targetacknowledgement_),
+  offsetof(::PacketDefaultTypeInternal, targetdesignationcommand_),
+  offsetof(::PacketDefaultTypeInternal, targetstatus_),
+  offsetof(::PacketDefaultTypeInternal, vehicleattitude_),
+  offsetof(::PacketDefaultTypeInternal, vehicleauthorizationreply_),
+  offsetof(::PacketDefaultTypeInternal, vehicleauthorizationrequest_),
+  offsetof(::PacketDefaultTypeInternal, vehiclebodysensedstate_),
+  offsetof(::PacketDefaultTypeInternal, vehicleglobalposition_),
+  offsetof(::PacketDefaultTypeInternal, vehicleidentification_),
+  offsetof(::PacketDefaultTypeInternal, vehicleinertialstate_),
+  offsetof(::PacketDefaultTypeInternal, vehiclemodecommand_),
+  offsetof(::PacketDefaultTypeInternal, vehiclesystemstatus_),
+  offsetof(::PacketDefaultTypeInternal, vehicletelemetrycommand_),
+  offsetof(::PacketDefaultTypeInternal, vehicleterminationcommand_),
+  offsetof(::PacketDefaultTypeInternal, vehiclewaypointcommand_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Packet, packet_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AirVehicleGroundRelativeState)},
@@ -720,6 +809,7 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 158, -1, sizeof(::VehicleTelemetryCommand)},
   { 166, -1, sizeof(::VehicleTerminationCommand)},
   { 173, -1, sizeof(::VehicleWaypointCommand)},
+  { 182, -1, sizeof(::Packet)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -742,6 +832,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::_VehicleTelemetryCommand_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::_VehicleTerminationCommand_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::_VehicleWaypointCommand_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::_Packet_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -760,7 +851,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 19);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 20);
 }
 
 void AddDescriptorsImpl() {
@@ -822,11 +913,37 @@ void AddDescriptorsImpl() {
       "ationCommand\022\022\n\nvehicle_id\030\001 \001(\r\022\030\n\020term"
       "ination_mode\030\002 \001(\r\"c\n\026VehicleWaypointCom"
       "mand\022\022\n\nvehicle_id\030\001 \001(\r\022\021\n\tlongitude\030\002 "
-      "\001(\002\022\020\n\010latitude\030\003 \001(\002\022\020\n\010altitude\030\004 \001(\002b"
-      "\006proto3"
+      "\001(\002\022\020\n\010latitude\030\003 \001(\002\022\020\n\010altitude\030\004 \001(\002\""
+      "\227\010\n\006Packet\022G\n\035AirVehicleGroundRelativeSt"
+      "ate\030\001 \001(\0132\036.AirVehicleGroundRelativeStat"
+      "eH\000\022!\n\nArmCommand\030\002 \001(\0132\013.ArmCommandH\000\022#"
+      "\n\013ArmPosition\030\003 \001(\0132\014.ArmPositionH\000\022\033\n\007B"
+      "attery\030\004 \001(\0132\010.BatteryH\000\0227\n\025TargetAcknow"
+      "ledgement\030\005 \001(\0132\026.TargetAcknowledgementH"
+      "\000\022=\n\030TargetDesignationCommand\030\006 \001(\0132\031.Ta"
+      "rgetDesignationCommandH\000\022%\n\014TargetStatus"
+      "\030\007 \001(\0132\r.TargetStatusH\000\022+\n\017VehicleAttitu"
+      "de\030\010 \001(\0132\020.VehicleAttitudeH\000\022\?\n\031VehicleA"
+      "uthorizationReply\030\t \001(\0132\032.VehicleAuthori"
+      "zationReplyH\000\022C\n\033VehicleAuthorizationReq"
+      "uest\030\n \001(\0132\034.VehicleAuthorizationRequest"
+      "H\000\0229\n\026VehicleBodySensedState\030\013 \001(\0132\027.Veh"
+      "icleBodySensedStateH\000\0227\n\025VehicleGlobalPo"
+      "sition\030\014 \001(\0132\026.VehicleGlobalPositionH\000\0227"
+      "\n\025VehicleIdentification\030\r \001(\0132\026.VehicleI"
+      "dentificationH\000\0225\n\024VehicleInertialState\030"
+      "\016 \001(\0132\025.VehicleInertialStateH\000\0221\n\022Vehicl"
+      "eModeCommand\030\017 \001(\0132\023.VehicleModeCommandH"
+      "\000\0223\n\023VehicleSystemStatus\030\020 \001(\0132\024.Vehicle"
+      "SystemStatusH\000\022;\n\027VehicleTelemetryComman"
+      "d\030\021 \001(\0132\030.VehicleTelemetryCommandH\000\022\?\n\031V"
+      "ehicleTerminationCommand\030\022 \001(\0132\032.Vehicle"
+      "TerminationCommandH\000\0229\n\026VehicleWaypointC"
+      "ommand\030\023 \001(\0132\027.VehicleWaypointCommandH\000B"
+      "\010\n\006packetb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2287);
+      descriptor, 3337);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ProtoPackets.proto", &protobuf_RegisterTypes);
 }
@@ -7812,6 +7929,1398 @@ void VehicleWaypointCommand::InternalSwap(VehicleWaypointCommand* other) {
 }
 
 ::google::protobuf::Metadata VehicleWaypointCommand::GetMetadata() const {
+  protobuf_ProtoPackets_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_ProtoPackets_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void Packet::InitAsDefaultInstance() {
+  ::_Packet_default_instance_.airvehiclegroundrelativestate_ = const_cast< ::AirVehicleGroundRelativeState*>(
+      ::AirVehicleGroundRelativeState::internal_default_instance());
+  ::_Packet_default_instance_.armcommand_ = const_cast< ::ArmCommand*>(
+      ::ArmCommand::internal_default_instance());
+  ::_Packet_default_instance_.armposition_ = const_cast< ::ArmPosition*>(
+      ::ArmPosition::internal_default_instance());
+  ::_Packet_default_instance_.battery_ = const_cast< ::Battery*>(
+      ::Battery::internal_default_instance());
+  ::_Packet_default_instance_.targetacknowledgement_ = const_cast< ::TargetAcknowledgement*>(
+      ::TargetAcknowledgement::internal_default_instance());
+  ::_Packet_default_instance_.targetdesignationcommand_ = const_cast< ::TargetDesignationCommand*>(
+      ::TargetDesignationCommand::internal_default_instance());
+  ::_Packet_default_instance_.targetstatus_ = const_cast< ::TargetStatus*>(
+      ::TargetStatus::internal_default_instance());
+  ::_Packet_default_instance_.vehicleattitude_ = const_cast< ::VehicleAttitude*>(
+      ::VehicleAttitude::internal_default_instance());
+  ::_Packet_default_instance_.vehicleauthorizationreply_ = const_cast< ::VehicleAuthorizationReply*>(
+      ::VehicleAuthorizationReply::internal_default_instance());
+  ::_Packet_default_instance_.vehicleauthorizationrequest_ = const_cast< ::VehicleAuthorizationRequest*>(
+      ::VehicleAuthorizationRequest::internal_default_instance());
+  ::_Packet_default_instance_.vehiclebodysensedstate_ = const_cast< ::VehicleBodySensedState*>(
+      ::VehicleBodySensedState::internal_default_instance());
+  ::_Packet_default_instance_.vehicleglobalposition_ = const_cast< ::VehicleGlobalPosition*>(
+      ::VehicleGlobalPosition::internal_default_instance());
+  ::_Packet_default_instance_.vehicleidentification_ = const_cast< ::VehicleIdentification*>(
+      ::VehicleIdentification::internal_default_instance());
+  ::_Packet_default_instance_.vehicleinertialstate_ = const_cast< ::VehicleInertialState*>(
+      ::VehicleInertialState::internal_default_instance());
+  ::_Packet_default_instance_.vehiclemodecommand_ = const_cast< ::VehicleModeCommand*>(
+      ::VehicleModeCommand::internal_default_instance());
+  ::_Packet_default_instance_.vehiclesystemstatus_ = const_cast< ::VehicleSystemStatus*>(
+      ::VehicleSystemStatus::internal_default_instance());
+  ::_Packet_default_instance_.vehicletelemetrycommand_ = const_cast< ::VehicleTelemetryCommand*>(
+      ::VehicleTelemetryCommand::internal_default_instance());
+  ::_Packet_default_instance_.vehicleterminationcommand_ = const_cast< ::VehicleTerminationCommand*>(
+      ::VehicleTerminationCommand::internal_default_instance());
+  ::_Packet_default_instance_.vehiclewaypointcommand_ = const_cast< ::VehicleWaypointCommand*>(
+      ::VehicleWaypointCommand::internal_default_instance());
+}
+void Packet::set_allocated_airvehiclegroundrelativestate(::AirVehicleGroundRelativeState* airvehiclegroundrelativestate) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (airvehiclegroundrelativestate) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      airvehiclegroundrelativestate = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, airvehiclegroundrelativestate, submessage_arena);
+    }
+    set_has_airvehiclegroundrelativestate();
+    packet_.airvehiclegroundrelativestate_ = airvehiclegroundrelativestate;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.AirVehicleGroundRelativeState)
+}
+void Packet::set_allocated_armcommand(::ArmCommand* armcommand) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (armcommand) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      armcommand = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, armcommand, submessage_arena);
+    }
+    set_has_armcommand();
+    packet_.armcommand_ = armcommand;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.ArmCommand)
+}
+void Packet::set_allocated_armposition(::ArmPosition* armposition) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (armposition) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      armposition = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, armposition, submessage_arena);
+    }
+    set_has_armposition();
+    packet_.armposition_ = armposition;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.ArmPosition)
+}
+void Packet::set_allocated_battery(::Battery* battery) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (battery) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      battery = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, battery, submessage_arena);
+    }
+    set_has_battery();
+    packet_.battery_ = battery;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.Battery)
+}
+void Packet::set_allocated_targetacknowledgement(::TargetAcknowledgement* targetacknowledgement) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (targetacknowledgement) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      targetacknowledgement = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, targetacknowledgement, submessage_arena);
+    }
+    set_has_targetacknowledgement();
+    packet_.targetacknowledgement_ = targetacknowledgement;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.TargetAcknowledgement)
+}
+void Packet::set_allocated_targetdesignationcommand(::TargetDesignationCommand* targetdesignationcommand) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (targetdesignationcommand) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      targetdesignationcommand = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, targetdesignationcommand, submessage_arena);
+    }
+    set_has_targetdesignationcommand();
+    packet_.targetdesignationcommand_ = targetdesignationcommand;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.TargetDesignationCommand)
+}
+void Packet::set_allocated_targetstatus(::TargetStatus* targetstatus) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (targetstatus) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      targetstatus = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, targetstatus, submessage_arena);
+    }
+    set_has_targetstatus();
+    packet_.targetstatus_ = targetstatus;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.TargetStatus)
+}
+void Packet::set_allocated_vehicleattitude(::VehicleAttitude* vehicleattitude) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehicleattitude) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehicleattitude = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehicleattitude, submessage_arena);
+    }
+    set_has_vehicleattitude();
+    packet_.vehicleattitude_ = vehicleattitude;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleAttitude)
+}
+void Packet::set_allocated_vehicleauthorizationreply(::VehicleAuthorizationReply* vehicleauthorizationreply) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehicleauthorizationreply) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehicleauthorizationreply = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehicleauthorizationreply, submessage_arena);
+    }
+    set_has_vehicleauthorizationreply();
+    packet_.vehicleauthorizationreply_ = vehicleauthorizationreply;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleAuthorizationReply)
+}
+void Packet::set_allocated_vehicleauthorizationrequest(::VehicleAuthorizationRequest* vehicleauthorizationrequest) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehicleauthorizationrequest) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehicleauthorizationrequest = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehicleauthorizationrequest, submessage_arena);
+    }
+    set_has_vehicleauthorizationrequest();
+    packet_.vehicleauthorizationrequest_ = vehicleauthorizationrequest;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleAuthorizationRequest)
+}
+void Packet::set_allocated_vehiclebodysensedstate(::VehicleBodySensedState* vehiclebodysensedstate) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehiclebodysensedstate) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehiclebodysensedstate = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehiclebodysensedstate, submessage_arena);
+    }
+    set_has_vehiclebodysensedstate();
+    packet_.vehiclebodysensedstate_ = vehiclebodysensedstate;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleBodySensedState)
+}
+void Packet::set_allocated_vehicleglobalposition(::VehicleGlobalPosition* vehicleglobalposition) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehicleglobalposition) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehicleglobalposition = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehicleglobalposition, submessage_arena);
+    }
+    set_has_vehicleglobalposition();
+    packet_.vehicleglobalposition_ = vehicleglobalposition;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleGlobalPosition)
+}
+void Packet::set_allocated_vehicleidentification(::VehicleIdentification* vehicleidentification) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehicleidentification) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehicleidentification = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehicleidentification, submessage_arena);
+    }
+    set_has_vehicleidentification();
+    packet_.vehicleidentification_ = vehicleidentification;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleIdentification)
+}
+void Packet::set_allocated_vehicleinertialstate(::VehicleInertialState* vehicleinertialstate) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehicleinertialstate) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehicleinertialstate = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehicleinertialstate, submessage_arena);
+    }
+    set_has_vehicleinertialstate();
+    packet_.vehicleinertialstate_ = vehicleinertialstate;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleInertialState)
+}
+void Packet::set_allocated_vehiclemodecommand(::VehicleModeCommand* vehiclemodecommand) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehiclemodecommand) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehiclemodecommand = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehiclemodecommand, submessage_arena);
+    }
+    set_has_vehiclemodecommand();
+    packet_.vehiclemodecommand_ = vehiclemodecommand;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleModeCommand)
+}
+void Packet::set_allocated_vehiclesystemstatus(::VehicleSystemStatus* vehiclesystemstatus) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehiclesystemstatus) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehiclesystemstatus = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehiclesystemstatus, submessage_arena);
+    }
+    set_has_vehiclesystemstatus();
+    packet_.vehiclesystemstatus_ = vehiclesystemstatus;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleSystemStatus)
+}
+void Packet::set_allocated_vehicletelemetrycommand(::VehicleTelemetryCommand* vehicletelemetrycommand) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehicletelemetrycommand) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehicletelemetrycommand = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehicletelemetrycommand, submessage_arena);
+    }
+    set_has_vehicletelemetrycommand();
+    packet_.vehicletelemetrycommand_ = vehicletelemetrycommand;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleTelemetryCommand)
+}
+void Packet::set_allocated_vehicleterminationcommand(::VehicleTerminationCommand* vehicleterminationcommand) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehicleterminationcommand) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehicleterminationcommand = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehicleterminationcommand, submessage_arena);
+    }
+    set_has_vehicleterminationcommand();
+    packet_.vehicleterminationcommand_ = vehicleterminationcommand;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleTerminationCommand)
+}
+void Packet::set_allocated_vehiclewaypointcommand(::VehicleWaypointCommand* vehiclewaypointcommand) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_packet();
+  if (vehiclewaypointcommand) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vehiclewaypointcommand = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vehiclewaypointcommand, submessage_arena);
+    }
+    set_has_vehiclewaypointcommand();
+    packet_.vehiclewaypointcommand_ = vehiclewaypointcommand;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Packet.VehicleWaypointCommand)
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Packet::kAirVehicleGroundRelativeStateFieldNumber;
+const int Packet::kArmCommandFieldNumber;
+const int Packet::kArmPositionFieldNumber;
+const int Packet::kBatteryFieldNumber;
+const int Packet::kTargetAcknowledgementFieldNumber;
+const int Packet::kTargetDesignationCommandFieldNumber;
+const int Packet::kTargetStatusFieldNumber;
+const int Packet::kVehicleAttitudeFieldNumber;
+const int Packet::kVehicleAuthorizationReplyFieldNumber;
+const int Packet::kVehicleAuthorizationRequestFieldNumber;
+const int Packet::kVehicleBodySensedStateFieldNumber;
+const int Packet::kVehicleGlobalPositionFieldNumber;
+const int Packet::kVehicleIdentificationFieldNumber;
+const int Packet::kVehicleInertialStateFieldNumber;
+const int Packet::kVehicleModeCommandFieldNumber;
+const int Packet::kVehicleSystemStatusFieldNumber;
+const int Packet::kVehicleTelemetryCommandFieldNumber;
+const int Packet::kVehicleTerminationCommandFieldNumber;
+const int Packet::kVehicleWaypointCommandFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Packet::Packet()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_ProtoPackets_2eproto::InitDefaultsPacket();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:Packet)
+}
+Packet::Packet(const Packet& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  clear_has_packet();
+  switch (from.packet_case()) {
+    case kAirVehicleGroundRelativeState: {
+      mutable_airvehiclegroundrelativestate()->::AirVehicleGroundRelativeState::MergeFrom(from.airvehiclegroundrelativestate());
+      break;
+    }
+    case kArmCommand: {
+      mutable_armcommand()->::ArmCommand::MergeFrom(from.armcommand());
+      break;
+    }
+    case kArmPosition: {
+      mutable_armposition()->::ArmPosition::MergeFrom(from.armposition());
+      break;
+    }
+    case kBattery: {
+      mutable_battery()->::Battery::MergeFrom(from.battery());
+      break;
+    }
+    case kTargetAcknowledgement: {
+      mutable_targetacknowledgement()->::TargetAcknowledgement::MergeFrom(from.targetacknowledgement());
+      break;
+    }
+    case kTargetDesignationCommand: {
+      mutable_targetdesignationcommand()->::TargetDesignationCommand::MergeFrom(from.targetdesignationcommand());
+      break;
+    }
+    case kTargetStatus: {
+      mutable_targetstatus()->::TargetStatus::MergeFrom(from.targetstatus());
+      break;
+    }
+    case kVehicleAttitude: {
+      mutable_vehicleattitude()->::VehicleAttitude::MergeFrom(from.vehicleattitude());
+      break;
+    }
+    case kVehicleAuthorizationReply: {
+      mutable_vehicleauthorizationreply()->::VehicleAuthorizationReply::MergeFrom(from.vehicleauthorizationreply());
+      break;
+    }
+    case kVehicleAuthorizationRequest: {
+      mutable_vehicleauthorizationrequest()->::VehicleAuthorizationRequest::MergeFrom(from.vehicleauthorizationrequest());
+      break;
+    }
+    case kVehicleBodySensedState: {
+      mutable_vehiclebodysensedstate()->::VehicleBodySensedState::MergeFrom(from.vehiclebodysensedstate());
+      break;
+    }
+    case kVehicleGlobalPosition: {
+      mutable_vehicleglobalposition()->::VehicleGlobalPosition::MergeFrom(from.vehicleglobalposition());
+      break;
+    }
+    case kVehicleIdentification: {
+      mutable_vehicleidentification()->::VehicleIdentification::MergeFrom(from.vehicleidentification());
+      break;
+    }
+    case kVehicleInertialState: {
+      mutable_vehicleinertialstate()->::VehicleInertialState::MergeFrom(from.vehicleinertialstate());
+      break;
+    }
+    case kVehicleModeCommand: {
+      mutable_vehiclemodecommand()->::VehicleModeCommand::MergeFrom(from.vehiclemodecommand());
+      break;
+    }
+    case kVehicleSystemStatus: {
+      mutable_vehiclesystemstatus()->::VehicleSystemStatus::MergeFrom(from.vehiclesystemstatus());
+      break;
+    }
+    case kVehicleTelemetryCommand: {
+      mutable_vehicletelemetrycommand()->::VehicleTelemetryCommand::MergeFrom(from.vehicletelemetrycommand());
+      break;
+    }
+    case kVehicleTerminationCommand: {
+      mutable_vehicleterminationcommand()->::VehicleTerminationCommand::MergeFrom(from.vehicleterminationcommand());
+      break;
+    }
+    case kVehicleWaypointCommand: {
+      mutable_vehiclewaypointcommand()->::VehicleWaypointCommand::MergeFrom(from.vehiclewaypointcommand());
+      break;
+    }
+    case PACKET_NOT_SET: {
+      break;
+    }
+  }
+  // @@protoc_insertion_point(copy_constructor:Packet)
+}
+
+void Packet::SharedCtor() {
+  clear_has_packet();
+  _cached_size_ = 0;
+}
+
+Packet::~Packet() {
+  // @@protoc_insertion_point(destructor:Packet)
+  SharedDtor();
+}
+
+void Packet::SharedDtor() {
+  if (has_packet()) {
+    clear_packet();
+  }
+}
+
+void Packet::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Packet::descriptor() {
+  ::protobuf_ProtoPackets_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_ProtoPackets_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Packet& Packet::default_instance() {
+  ::protobuf_ProtoPackets_2eproto::InitDefaultsPacket();
+  return *internal_default_instance();
+}
+
+Packet* Packet::New(::google::protobuf::Arena* arena) const {
+  Packet* n = new Packet;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void Packet::clear_packet() {
+// @@protoc_insertion_point(one_of_clear_start:Packet)
+  switch (packet_case()) {
+    case kAirVehicleGroundRelativeState: {
+      delete packet_.airvehiclegroundrelativestate_;
+      break;
+    }
+    case kArmCommand: {
+      delete packet_.armcommand_;
+      break;
+    }
+    case kArmPosition: {
+      delete packet_.armposition_;
+      break;
+    }
+    case kBattery: {
+      delete packet_.battery_;
+      break;
+    }
+    case kTargetAcknowledgement: {
+      delete packet_.targetacknowledgement_;
+      break;
+    }
+    case kTargetDesignationCommand: {
+      delete packet_.targetdesignationcommand_;
+      break;
+    }
+    case kTargetStatus: {
+      delete packet_.targetstatus_;
+      break;
+    }
+    case kVehicleAttitude: {
+      delete packet_.vehicleattitude_;
+      break;
+    }
+    case kVehicleAuthorizationReply: {
+      delete packet_.vehicleauthorizationreply_;
+      break;
+    }
+    case kVehicleAuthorizationRequest: {
+      delete packet_.vehicleauthorizationrequest_;
+      break;
+    }
+    case kVehicleBodySensedState: {
+      delete packet_.vehiclebodysensedstate_;
+      break;
+    }
+    case kVehicleGlobalPosition: {
+      delete packet_.vehicleglobalposition_;
+      break;
+    }
+    case kVehicleIdentification: {
+      delete packet_.vehicleidentification_;
+      break;
+    }
+    case kVehicleInertialState: {
+      delete packet_.vehicleinertialstate_;
+      break;
+    }
+    case kVehicleModeCommand: {
+      delete packet_.vehiclemodecommand_;
+      break;
+    }
+    case kVehicleSystemStatus: {
+      delete packet_.vehiclesystemstatus_;
+      break;
+    }
+    case kVehicleTelemetryCommand: {
+      delete packet_.vehicletelemetrycommand_;
+      break;
+    }
+    case kVehicleTerminationCommand: {
+      delete packet_.vehicleterminationcommand_;
+      break;
+    }
+    case kVehicleWaypointCommand: {
+      delete packet_.vehiclewaypointcommand_;
+      break;
+    }
+    case PACKET_NOT_SET: {
+      break;
+    }
+  }
+  _oneof_case_[0] = PACKET_NOT_SET;
+}
+
+
+void Packet::Clear() {
+// @@protoc_insertion_point(message_clear_start:Packet)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  clear_packet();
+  _internal_metadata_.Clear();
+}
+
+bool Packet::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:Packet)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .AirVehicleGroundRelativeState AirVehicleGroundRelativeState = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_airvehiclegroundrelativestate()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .ArmCommand ArmCommand = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_armcommand()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .ArmPosition ArmPosition = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_armposition()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .Battery Battery = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_battery()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .TargetAcknowledgement TargetAcknowledgement = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_targetacknowledgement()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .TargetDesignationCommand TargetDesignationCommand = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_targetdesignationcommand()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .TargetStatus TargetStatus = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_targetstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleAttitude VehicleAttitude = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehicleattitude()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleAuthorizationReply VehicleAuthorizationReply = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehicleauthorizationreply()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleAuthorizationRequest VehicleAuthorizationRequest = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehicleauthorizationrequest()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleBodySensedState VehicleBodySensedState = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(90u /* 90 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehiclebodysensedstate()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleGlobalPosition VehicleGlobalPosition = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehicleglobalposition()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleIdentification VehicleIdentification = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(106u /* 106 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehicleidentification()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleInertialState VehicleInertialState = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(114u /* 114 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehicleinertialstate()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleModeCommand VehicleModeCommand = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(122u /* 122 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehiclemodecommand()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleSystemStatus VehicleSystemStatus = 16;
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(130u /* 130 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehiclesystemstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleTelemetryCommand VehicleTelemetryCommand = 17;
+      case 17: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(138u /* 138 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehicletelemetrycommand()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleTerminationCommand VehicleTerminationCommand = 18;
+      case 18: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(146u /* 146 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehicleterminationcommand()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VehicleWaypointCommand VehicleWaypointCommand = 19;
+      case 19: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(154u /* 154 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_vehiclewaypointcommand()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:Packet)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:Packet)
+  return false;
+#undef DO_
+}
+
+void Packet::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:Packet)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .AirVehicleGroundRelativeState AirVehicleGroundRelativeState = 1;
+  if (has_airvehiclegroundrelativestate()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, *packet_.airvehiclegroundrelativestate_, output);
+  }
+
+  // .ArmCommand ArmCommand = 2;
+  if (has_armcommand()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, *packet_.armcommand_, output);
+  }
+
+  // .ArmPosition ArmPosition = 3;
+  if (has_armposition()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, *packet_.armposition_, output);
+  }
+
+  // .Battery Battery = 4;
+  if (has_battery()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, *packet_.battery_, output);
+  }
+
+  // .TargetAcknowledgement TargetAcknowledgement = 5;
+  if (has_targetacknowledgement()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, *packet_.targetacknowledgement_, output);
+  }
+
+  // .TargetDesignationCommand TargetDesignationCommand = 6;
+  if (has_targetdesignationcommand()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, *packet_.targetdesignationcommand_, output);
+  }
+
+  // .TargetStatus TargetStatus = 7;
+  if (has_targetstatus()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, *packet_.targetstatus_, output);
+  }
+
+  // .VehicleAttitude VehicleAttitude = 8;
+  if (has_vehicleattitude()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, *packet_.vehicleattitude_, output);
+  }
+
+  // .VehicleAuthorizationReply VehicleAuthorizationReply = 9;
+  if (has_vehicleauthorizationreply()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, *packet_.vehicleauthorizationreply_, output);
+  }
+
+  // .VehicleAuthorizationRequest VehicleAuthorizationRequest = 10;
+  if (has_vehicleauthorizationrequest()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, *packet_.vehicleauthorizationrequest_, output);
+  }
+
+  // .VehicleBodySensedState VehicleBodySensedState = 11;
+  if (has_vehiclebodysensedstate()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, *packet_.vehiclebodysensedstate_, output);
+  }
+
+  // .VehicleGlobalPosition VehicleGlobalPosition = 12;
+  if (has_vehicleglobalposition()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      12, *packet_.vehicleglobalposition_, output);
+  }
+
+  // .VehicleIdentification VehicleIdentification = 13;
+  if (has_vehicleidentification()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, *packet_.vehicleidentification_, output);
+  }
+
+  // .VehicleInertialState VehicleInertialState = 14;
+  if (has_vehicleinertialstate()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      14, *packet_.vehicleinertialstate_, output);
+  }
+
+  // .VehicleModeCommand VehicleModeCommand = 15;
+  if (has_vehiclemodecommand()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      15, *packet_.vehiclemodecommand_, output);
+  }
+
+  // .VehicleSystemStatus VehicleSystemStatus = 16;
+  if (has_vehiclesystemstatus()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      16, *packet_.vehiclesystemstatus_, output);
+  }
+
+  // .VehicleTelemetryCommand VehicleTelemetryCommand = 17;
+  if (has_vehicletelemetrycommand()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      17, *packet_.vehicletelemetrycommand_, output);
+  }
+
+  // .VehicleTerminationCommand VehicleTerminationCommand = 18;
+  if (has_vehicleterminationcommand()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      18, *packet_.vehicleterminationcommand_, output);
+  }
+
+  // .VehicleWaypointCommand VehicleWaypointCommand = 19;
+  if (has_vehiclewaypointcommand()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      19, *packet_.vehiclewaypointcommand_, output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:Packet)
+}
+
+::google::protobuf::uint8* Packet::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:Packet)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .AirVehicleGroundRelativeState AirVehicleGroundRelativeState = 1;
+  if (has_airvehiclegroundrelativestate()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, *packet_.airvehiclegroundrelativestate_, deterministic, target);
+  }
+
+  // .ArmCommand ArmCommand = 2;
+  if (has_armcommand()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, *packet_.armcommand_, deterministic, target);
+  }
+
+  // .ArmPosition ArmPosition = 3;
+  if (has_armposition()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, *packet_.armposition_, deterministic, target);
+  }
+
+  // .Battery Battery = 4;
+  if (has_battery()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, *packet_.battery_, deterministic, target);
+  }
+
+  // .TargetAcknowledgement TargetAcknowledgement = 5;
+  if (has_targetacknowledgement()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, *packet_.targetacknowledgement_, deterministic, target);
+  }
+
+  // .TargetDesignationCommand TargetDesignationCommand = 6;
+  if (has_targetdesignationcommand()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, *packet_.targetdesignationcommand_, deterministic, target);
+  }
+
+  // .TargetStatus TargetStatus = 7;
+  if (has_targetstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, *packet_.targetstatus_, deterministic, target);
+  }
+
+  // .VehicleAttitude VehicleAttitude = 8;
+  if (has_vehicleattitude()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, *packet_.vehicleattitude_, deterministic, target);
+  }
+
+  // .VehicleAuthorizationReply VehicleAuthorizationReply = 9;
+  if (has_vehicleauthorizationreply()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        9, *packet_.vehicleauthorizationreply_, deterministic, target);
+  }
+
+  // .VehicleAuthorizationRequest VehicleAuthorizationRequest = 10;
+  if (has_vehicleauthorizationrequest()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, *packet_.vehicleauthorizationrequest_, deterministic, target);
+  }
+
+  // .VehicleBodySensedState VehicleBodySensedState = 11;
+  if (has_vehiclebodysensedstate()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, *packet_.vehiclebodysensedstate_, deterministic, target);
+  }
+
+  // .VehicleGlobalPosition VehicleGlobalPosition = 12;
+  if (has_vehicleglobalposition()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        12, *packet_.vehicleglobalposition_, deterministic, target);
+  }
+
+  // .VehicleIdentification VehicleIdentification = 13;
+  if (has_vehicleidentification()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        13, *packet_.vehicleidentification_, deterministic, target);
+  }
+
+  // .VehicleInertialState VehicleInertialState = 14;
+  if (has_vehicleinertialstate()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        14, *packet_.vehicleinertialstate_, deterministic, target);
+  }
+
+  // .VehicleModeCommand VehicleModeCommand = 15;
+  if (has_vehiclemodecommand()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        15, *packet_.vehiclemodecommand_, deterministic, target);
+  }
+
+  // .VehicleSystemStatus VehicleSystemStatus = 16;
+  if (has_vehiclesystemstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        16, *packet_.vehiclesystemstatus_, deterministic, target);
+  }
+
+  // .VehicleTelemetryCommand VehicleTelemetryCommand = 17;
+  if (has_vehicletelemetrycommand()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        17, *packet_.vehicletelemetrycommand_, deterministic, target);
+  }
+
+  // .VehicleTerminationCommand VehicleTerminationCommand = 18;
+  if (has_vehicleterminationcommand()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        18, *packet_.vehicleterminationcommand_, deterministic, target);
+  }
+
+  // .VehicleWaypointCommand VehicleWaypointCommand = 19;
+  if (has_vehiclewaypointcommand()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        19, *packet_.vehiclewaypointcommand_, deterministic, target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Packet)
+  return target;
+}
+
+size_t Packet::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Packet)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  switch (packet_case()) {
+    // .AirVehicleGroundRelativeState AirVehicleGroundRelativeState = 1;
+    case kAirVehicleGroundRelativeState: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.airvehiclegroundrelativestate_);
+      break;
+    }
+    // .ArmCommand ArmCommand = 2;
+    case kArmCommand: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.armcommand_);
+      break;
+    }
+    // .ArmPosition ArmPosition = 3;
+    case kArmPosition: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.armposition_);
+      break;
+    }
+    // .Battery Battery = 4;
+    case kBattery: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.battery_);
+      break;
+    }
+    // .TargetAcknowledgement TargetAcknowledgement = 5;
+    case kTargetAcknowledgement: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.targetacknowledgement_);
+      break;
+    }
+    // .TargetDesignationCommand TargetDesignationCommand = 6;
+    case kTargetDesignationCommand: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.targetdesignationcommand_);
+      break;
+    }
+    // .TargetStatus TargetStatus = 7;
+    case kTargetStatus: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.targetstatus_);
+      break;
+    }
+    // .VehicleAttitude VehicleAttitude = 8;
+    case kVehicleAttitude: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehicleattitude_);
+      break;
+    }
+    // .VehicleAuthorizationReply VehicleAuthorizationReply = 9;
+    case kVehicleAuthorizationReply: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehicleauthorizationreply_);
+      break;
+    }
+    // .VehicleAuthorizationRequest VehicleAuthorizationRequest = 10;
+    case kVehicleAuthorizationRequest: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehicleauthorizationrequest_);
+      break;
+    }
+    // .VehicleBodySensedState VehicleBodySensedState = 11;
+    case kVehicleBodySensedState: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehiclebodysensedstate_);
+      break;
+    }
+    // .VehicleGlobalPosition VehicleGlobalPosition = 12;
+    case kVehicleGlobalPosition: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehicleglobalposition_);
+      break;
+    }
+    // .VehicleIdentification VehicleIdentification = 13;
+    case kVehicleIdentification: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehicleidentification_);
+      break;
+    }
+    // .VehicleInertialState VehicleInertialState = 14;
+    case kVehicleInertialState: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehicleinertialstate_);
+      break;
+    }
+    // .VehicleModeCommand VehicleModeCommand = 15;
+    case kVehicleModeCommand: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehiclemodecommand_);
+      break;
+    }
+    // .VehicleSystemStatus VehicleSystemStatus = 16;
+    case kVehicleSystemStatus: {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehiclesystemstatus_);
+      break;
+    }
+    // .VehicleTelemetryCommand VehicleTelemetryCommand = 17;
+    case kVehicleTelemetryCommand: {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehicletelemetrycommand_);
+      break;
+    }
+    // .VehicleTerminationCommand VehicleTerminationCommand = 18;
+    case kVehicleTerminationCommand: {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehicleterminationcommand_);
+      break;
+    }
+    // .VehicleWaypointCommand VehicleWaypointCommand = 19;
+    case kVehicleWaypointCommand: {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *packet_.vehiclewaypointcommand_);
+      break;
+    }
+    case PACKET_NOT_SET: {
+      break;
+    }
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Packet::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Packet)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Packet* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Packet>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Packet)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Packet)
+    MergeFrom(*source);
+  }
+}
+
+void Packet::MergeFrom(const Packet& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Packet)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  switch (from.packet_case()) {
+    case kAirVehicleGroundRelativeState: {
+      mutable_airvehiclegroundrelativestate()->::AirVehicleGroundRelativeState::MergeFrom(from.airvehiclegroundrelativestate());
+      break;
+    }
+    case kArmCommand: {
+      mutable_armcommand()->::ArmCommand::MergeFrom(from.armcommand());
+      break;
+    }
+    case kArmPosition: {
+      mutable_armposition()->::ArmPosition::MergeFrom(from.armposition());
+      break;
+    }
+    case kBattery: {
+      mutable_battery()->::Battery::MergeFrom(from.battery());
+      break;
+    }
+    case kTargetAcknowledgement: {
+      mutable_targetacknowledgement()->::TargetAcknowledgement::MergeFrom(from.targetacknowledgement());
+      break;
+    }
+    case kTargetDesignationCommand: {
+      mutable_targetdesignationcommand()->::TargetDesignationCommand::MergeFrom(from.targetdesignationcommand());
+      break;
+    }
+    case kTargetStatus: {
+      mutable_targetstatus()->::TargetStatus::MergeFrom(from.targetstatus());
+      break;
+    }
+    case kVehicleAttitude: {
+      mutable_vehicleattitude()->::VehicleAttitude::MergeFrom(from.vehicleattitude());
+      break;
+    }
+    case kVehicleAuthorizationReply: {
+      mutable_vehicleauthorizationreply()->::VehicleAuthorizationReply::MergeFrom(from.vehicleauthorizationreply());
+      break;
+    }
+    case kVehicleAuthorizationRequest: {
+      mutable_vehicleauthorizationrequest()->::VehicleAuthorizationRequest::MergeFrom(from.vehicleauthorizationrequest());
+      break;
+    }
+    case kVehicleBodySensedState: {
+      mutable_vehiclebodysensedstate()->::VehicleBodySensedState::MergeFrom(from.vehiclebodysensedstate());
+      break;
+    }
+    case kVehicleGlobalPosition: {
+      mutable_vehicleglobalposition()->::VehicleGlobalPosition::MergeFrom(from.vehicleglobalposition());
+      break;
+    }
+    case kVehicleIdentification: {
+      mutable_vehicleidentification()->::VehicleIdentification::MergeFrom(from.vehicleidentification());
+      break;
+    }
+    case kVehicleInertialState: {
+      mutable_vehicleinertialstate()->::VehicleInertialState::MergeFrom(from.vehicleinertialstate());
+      break;
+    }
+    case kVehicleModeCommand: {
+      mutable_vehiclemodecommand()->::VehicleModeCommand::MergeFrom(from.vehiclemodecommand());
+      break;
+    }
+    case kVehicleSystemStatus: {
+      mutable_vehiclesystemstatus()->::VehicleSystemStatus::MergeFrom(from.vehiclesystemstatus());
+      break;
+    }
+    case kVehicleTelemetryCommand: {
+      mutable_vehicletelemetrycommand()->::VehicleTelemetryCommand::MergeFrom(from.vehicletelemetrycommand());
+      break;
+    }
+    case kVehicleTerminationCommand: {
+      mutable_vehicleterminationcommand()->::VehicleTerminationCommand::MergeFrom(from.vehicleterminationcommand());
+      break;
+    }
+    case kVehicleWaypointCommand: {
+      mutable_vehiclewaypointcommand()->::VehicleWaypointCommand::MergeFrom(from.vehiclewaypointcommand());
+      break;
+    }
+    case PACKET_NOT_SET: {
+      break;
+    }
+  }
+}
+
+void Packet::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Packet)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Packet::CopyFrom(const Packet& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Packet)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Packet::IsInitialized() const {
+  return true;
+}
+
+void Packet::Swap(Packet* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Packet::InternalSwap(Packet* other) {
+  using std::swap;
+  swap(packet_, other->packet_);
+  swap(_oneof_case_[0], other->_oneof_case_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata Packet::GetMetadata() const {
   protobuf_ProtoPackets_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_ProtoPackets_2eproto::file_level_metadata[kIndexInFileMessages];
 }
