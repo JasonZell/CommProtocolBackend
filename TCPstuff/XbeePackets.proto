@@ -1,0 +1,146 @@
+syntax = "proto3";
+
+message AirVehicleGroundRelativeState {
+  uint_16 vehicle_id = 1;
+  float angle_of_attack = 2;
+  float angle_of_sideslip = 3;
+  float true_airspeed = 4;
+  float indicated_airspeed = 5;
+  float north_wind_speed = 6;
+  float east_wind_speed = 7;
+  float north_ground_speed = 8;
+  float east_ground_speed = 9;
+  float barometric_pressure = 10;
+  float barometric_altitude = 11;
+}
+
+message ArmCommand {
+  uint8 id = 1;
+  int32 position = 2;
+}
+
+message ArmPosition {
+  int32 position1 = 1;
+  int32 position2 = 2;
+  int32 position3 = 3;
+  int32 position4 = 4;
+}
+
+message Battery {
+  uint32 batteryPercentage = 1;
+}
+
+message TargetAcknowledgement {
+  uint_8 target_status = 1;
+}
+
+message TargetDesignationCommand {
+  uint16  vehicle_id = 1;
+  uint8  payload_id = 2;
+  uint8  target_id = 3;
+  uint8  target_type = 4;
+  float  longitude = 5;
+  float  latitude = 6;
+  float  altitude = 7;
+}
+
+message TargetStatus {
+  double target_radius = 1;
+  double target_angle = 2;
+  double target_altitude = 3;
+}
+
+message VehicleAttitude {
+  uint16 vehicle_id = 1;
+  float roll = 2;
+  float pitch = 3;
+  float yaw = 4;
+}
+
+message VehicleAuthorizationReply {
+  uint16 vehicle_id = 1;
+  uint8 vehicle_type = 2;
+  uint8 authorized_services = 3;
+  uint8 granted_services = 4;
+}
+
+message VehicleAuthorizationRequest {
+  uint16 vehicle_id = 1;
+  uint8 vehicle_type = 2;
+  uint8 authorized_services = 3;
+  uint8 granted_services = 4;
+}
+
+message VehicleBodySensedState {
+  uint16 vehicle_id = 1;
+  float x_accel = 2;
+  float y_accel = 3;
+  float z_accel = 4;
+  float roll_rate = 5;
+  float pitch_rate = 6;
+  float yaw_rate = 7;
+}
+
+message VehicleGlobalPosition {
+  uint16 vehicle_id= 1;
+  float longitude = 2;
+  float latitude = 3;
+  float altitude = 4;
+  float x_speed = 5;
+  float y_speed = 6;
+  float z_speed = 7;
+}
+
+message VehicleIdentification {
+  uint16 vehicle_id = 1;
+  uint8 vehicle_type = 2;
+}
+
+message VehicleInertialState {
+  uint16 vehicle_id = 1;
+  float longitude = 2;
+  float latitude = 3;
+  float altitude = 4;
+  float roll = 5;
+  float pitch = 6;
+  float heading = 7;
+  float north_speed = 8;
+  float east_speed = 9;
+  float vertical_speed = 10;
+  float roll_rate = 11;
+  float pitch_rate = 12;
+  float yaw_rate = 13;
+  float north_accel = 14;
+  float east_accel = 15;
+  float vertical_accel = 16;
+}
+
+message VehicleModeCommand {
+  uint16 vehicle_id = 1;
+  uint8 vehicle_mode = 2;
+}
+
+message VehicleSystemStatus {
+  uint16 vehicle_id = 1;
+  uint8 vehicle_mode = 2;
+  uint8 vehicle_state = 3;
+}
+
+message VehicleTelemetryCommand {
+  uint16 vehicle_id = 1;
+  uint8 telemetry_select = 2;
+  uint8 telemetry_rate = 3;
+}
+
+message VehicleTerminationCommand {
+  uint16 vehicle_id = 1;
+  uint8 termination_mode = 2;
+}
+
+message VehicleWaypointCommand {
+  uint16 vehicle_id = 1;
+  float longitude = 2;
+  float latitude = 3;
+  float altitude = 4;
+}
+

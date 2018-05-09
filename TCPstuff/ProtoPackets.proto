@@ -1,145 +1,169 @@
 syntax = "proto3";
 
 message AirVehicleGroundRelativeState {
-    required uint32 vehicle_id = 0;
-    required uint32 angle_of_attack = 1;
-    required uint32 angle_of_sideslip = 2;
-    required uint32 true_airspeed = 3;
-    required uint32 indicated_airspeed = 4;
-    required uint32 north_wind_speed = 5;
-    required uint32 east_wind_speed = 6;
-    required uint32 north_ground_speed = 7;
-    required uint32 east_ground_speed = 8;
-    required uint32 barometric_pressure = 9;
-    required uint32 barometric_altitude = 10;
+  uint32 vehicle_id = 1;
+  int32 angle_of_attack = 2;
+  int32 angle_of_sideslip = 3;
+  int32 true_airspeed = 4;
+  int32 indicated_airspeed = 5;
+  int32 north_wind_speed = 6;
+  int32 east_wind_speed = 7;
+  int32 north_ground_speed = 8;
+  int32 east_ground_speed = 9;
+  int32 barometric_pressure = 10;
+  int32 barometric_altitude = 11;
 }
 
 message ArmCommand {
-    required uint32 id = 0;
-    required uint32 position = 1;
+  uint32 id = 1;
+  int32 position = 2;
 }
 
 message ArmPosition {
-    required uint32 position1 = 0;
-    required uint32 position2 = 1;
-    required uint32 position3 = 2;
-    required uint32 position4 = 3;
+  int32 position1 = 1;
+  int32 position2 = 2;
+  int32 position3 = 3;
+  int32 position4 = 4;
 }
 
 message Battery {
-    required uint32 batteryPercentage = 0;
+  uint32 batteryPercentage = 1;
 }
 
 message TargetAcknowledgement {
-    required uint32 target_status = 0;
+  uint32 target_status = 1;
 }
 
 message TargetDesignationCommand {
-    required uint32  vehicle_id = 0;
-    required uint32  payload_id = 1;
-    required uint32  target_id = 2;
-    required uint32  target_type = 3;
-    required uint32  longitude = 4;
-    required uint32  latitude = 5;
-    required uint32  altitude = 6;
+  uint32  vehicle_id = 1;
+  uint32  payload_id = 2;
+  uint32  target_id = 3;
+  uint32  target_type = 4;
+  int32  longitude = 5;
+  int32  latitude = 6;
+  int32  altitude = 7;
 }
 
 message TargetStatus {
-    required uint32 target_radius = 0;
-    required uint32 target_angle = 1;
-    required uint32 target_altitude = 2;
+  int64 target_radius = 1;
+  int64 target_angle = 2;
+  int64 target_altitude = 3;
 }
 
 message VehicleAttitude {
-    required uint32 vehicle_id = 0;
-    required uint32 roll = 1;
-    required uint32 pitch = 2;
-    required uint32 yaw = 3;
+  uint32 vehicle_id = 1;
+  int32 roll = 2;
+  int32 pitch = 3;
+  int32 yaw = 4;
 }
 
 message VehicleAuthorizationReply {
-    required uint32 vehicle_id = 0;
-    required uint32 vehicle_type = 1;
-    required uint32 authorized_services = 2;
-    required uint32 granted_services = 3;
+  uint32 vehicle_id = 1;
+  uint32 vehicle_type = 2;
+  uint32 authorized_services = 3;
+  uint32 granted_services = 4;
 }
 
 message VehicleAuthorizationRequest {
-    required uint32 vehicle_id = 0;
-    required uint32 vehicle_type = 1;
-    required uint32 authorized_services = 2;
-    required uint32 granted_services = 3;
+  uint32 vehicle_id = 1;
+  uint32 vehicle_type = 2;
+  uint32 authorized_services = 3;
+  uint32 granted_services = 4;
 }
 
 message VehicleBodySensedState {
-    required uint32 vehicle_id = 0;
-    required uint32 x_accel = 1;
-    required uint32 y_accel = 2;
-    required uint32 z_accel = 3;
-    required uint32 roll_rate = 4;
-    required uint32 pitch_rate = 5;
-    required uint32 yaw_rate = 6;
+  uint32 vehicle_id = 1;
+  int32 x_accel = 2;
+  int32 y_accel = 3;
+  int32 z_accel = 4;
+  int32 roll_rate = 5;
+  int32 pitch_rate = 6;
+  int32 yaw_rate = 7;
 }
 
 message VehicleGlobalPosition {
-    required uint32 vehicle_id= 0;
-    required uint32 longitude = 1;
-    required uint32 latitude = 2;
-    required uint32 altitude = 3;
-    required uint32 x_speed = 4;
-    required uint32 y_speed = 5;
-    required uint32 z_speed = 6;
+  uint32 vehicle_id= 1;
+  int32 longitude = 2;
+  int32 latitude = 3;
+  int32 altitude = 4;
+  int32 x_speed = 5;
+  int32 y_speed = 6;
+  int32 z_speed = 7;
 }
 
 message VehicleIdentification {
-    required uint32 vehicle_id = 0;
-    required uint32 vehicle_type = 1;
+  uint32 vehicle_id = 1;
+  uint32 vehicle_type = 2;
 }
 
 message VehicleInertialState {
-    required uint32 vehicle_id = 0;
-    required uint32 longitude = 1;
-    required uint32 latitude = 2;
-    required uint32 altitude = 3;
-    required uint32 roll = 4;
-    required uint32 pitch = 5;
-    required uint32 heading = 6;
-    required uint32 north_speed = 7;
-    required uint32 east_speed = 8;
-    required uint32 vertical_speed = 9;
-    required uint32 roll_rate = 10;
-    required uint32 pitch_rate = 11;
-    required uint32 yaw_rate = 12;
-    required uint32 north_accel = 13;
-    required uint32 east_accel = 14;
-    required uint32 vertical_accel = 15;
+  uint32 vehicle_id = 1;
+  int32 longitude = 2;
+  int32 latitude = 3;
+  int32 altitude = 4;
+  int32 roll = 5;
+  int32 pitch = 6;
+  int32 heading = 7;
+  int32 north_speed = 8;
+  int32 east_speed = 9;
+  int32 vertical_speed = 10;
+  int32 roll_rate = 11;
+  int32 pitch_rate = 12;
+  int32 yaw_rate = 13;
+  int32 north_accel = 14;
+  int32 east_accel = 15;
+  int32 vertical_accel = 16;
 }
 
 message VehicleModeCommand {
-    required uint32 vehicle_id = 0;
-    required uint32 vehicle_mode = 1;
+  uint32 vehicle_id = 1;
+  uint32 vehicle_mode = 2;
 }
 
 message VehicleSystemStatus {
-    required uint32 vehicle_id = 0;
-    required uint32 vehicle_mode = 1;
-    required uint32 vehicle_state = 2;
+  uint32 vehicle_id = 1;
+  uint32 vehicle_mode = 2;
+  uint32 vehicle_state = 3;
 }
 
 message VehicleTelemetryCommand {
-    required uint32 vehicle_id = 0;
-    required uint32 telemetry_select = 1;
-    required uint32 telemetry_rate = 2;
+  uint32 vehicle_id = 1;
+  uint32 telemetry_select = 2;
+  uint32 telemetry_rate = 3;
 }
 
 message VehicleTerminationCommand {
-    required uint32 vehicle_id = 0;
-    required uint32 termination_mode = 1;
+  uint32 vehicle_id = 1;
+  uint32 termination_mode = 2;
 }
 
 message VehicleWaypointCommand {
-    required uint32 vehicle_id = 0;
-    required uint32 longitude = 1;
-    required uint32 latitude = 2;
-    required uint32 altitude = 3;
+  uint32 vehicle_id = 1;
+  int32 longitude = 2;
+  int32 latitude = 3;
+  int32 altitude = 4;
+}
+
+message Packet {
+  oneof packet {
+    AirVehicleGroundRelativeState AirVehicleGroundRelativeState = 1;
+    ArmCommand ArmCommand = 2;
+    ArmPosition ArmPosition = 3;
+    Battery Battery = 4;
+    TargetAcknowledgement TargetAcknowledgement = 5;
+    TargetDesignationCommand TargetDesignationCommand = 6;
+    TargetStatus TargetStatus = 7;
+    VehicleAttitude VehicleAttitude = 8;
+    VehicleAuthorizationReply VehicleAuthorizationReply = 9;
+    VehicleAuthorizationRequest VehicleAuthorizationRequest = 10;
+    VehicleBodySensedState VehicleBodySensedState = 11;
+    VehicleGlobalPosition VehicleGlobalPosition = 12;
+    VehicleIdentification VehicleIdentification = 13;
+    VehicleInertialState VehicleInertialState = 14;
+    VehicleModeCommand VehicleModeCommand = 15;
+    VehicleSystemStatus VehicleSystemStatus = 16;
+    VehicleTelemetryCommand VehicleTelemetryCommand = 17;
+    VehicleTerminationCommand VehicleTerminationCommand = 18;
+    VehicleWaypointCommand VehicleWaypointCommand = 19;
+  }
 }
