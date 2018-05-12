@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message Message1 {
+  uint_16 a = 1;
+}
+
+message Message2 {
+  uint32 a = 1;
+  uint32 b = 2;
+}
+
+message Message3 {
+  uint32 a = 1;
+  uint32 b = 2;
+  uint32 c = 3;
+}
+
+message Message4 {
+  uint32 a = 1;
+}
+
+message Packet {
+  oneof packet {
+    Message1 msg1 = 1;
+    Message2 msg2 = 2;
+    Message3 msg3 = 3;
+    Message4 msg4 = 4;
+  }
+}
